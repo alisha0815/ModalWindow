@@ -24,3 +24,11 @@ for (let i = 0; i < btnsOpenModal.length; i++) {
 // Close button
 btnsCloseModal.addEventListener('click', closeModal); // button
 overlay.addEventListener('click', closeModal); // overlay
+
+// Esc press functionality
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+    // console.log('Escape was pressed');
+    closeModal();
+  }
+});
